@@ -2,15 +2,15 @@ package models.model;
 
 import java.sql.Date;
 
-public class OrderModel {
+public class Order{
 		private String orser_id;
-		private CustomerModel customer_id;
-		private CarModel car_id;
+		private Customer customer_id;
+		private Car car_id;
 		private Date begin_date;
 		private Date end_date;
 		private int car_status_before_rent;
 		private int car_status_after_rent;
-		public OrderModel(String orser_id, CustomerModel customer_id, CarModel car_id, Date begin_date, Date end_date,
+		public Order(String orser_id, Customer customer_id, Car car_id, Date begin_date, Date end_date,
 				int car_status_before_rent, int car_status_after_rent) {
 			super();
 			this.orser_id = orser_id;
@@ -21,7 +21,7 @@ public class OrderModel {
 			this.car_status_before_rent = car_status_before_rent;
 			this.car_status_after_rent = car_status_after_rent;
 		}
-		public OrderModel() {
+		public Order() {
 			super();
 			// TODO Auto-generated constructor stub
 		}
@@ -31,16 +31,16 @@ public class OrderModel {
 		public void setOrser_id(String orser_id) {
 			this.orser_id = orser_id;
 		}
-		public CustomerModel getCustomer_id() {
+		public Customer getCustomer_id() {
 			return customer_id;
 		}
-		public void setCustomer_id(CustomerModel customer_id) {
+		public void setCustomer_id(Customer customer_id) {
 			this.customer_id = customer_id;
 		}
-		public CarModel getCar_id() {
+		public Car getCar_id() {
 			return car_id;
 		}
-		public void setCar_id(CarModel car_id) {
+		public void setCar_id(Car car_id) {
 			this.car_id = car_id;
 		}
 		public Date getBegin_date() {

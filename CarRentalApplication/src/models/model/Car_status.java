@@ -1,14 +1,14 @@
 package models.model;
 
-public class car_status {
+public class Car_status {
 	private String id;
 	private double cost;
 	private int description;
-	public car_status() {
+	public Car_status() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public car_status(String id, double cost, int description) {
+	public Car_status(String id, double cost, int description) {
 		super();
 		this.id = id;
 		this.cost = cost;

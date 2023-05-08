@@ -1,16 +1,24 @@
 package models.model;
 
-public class CarModel {
+public class Car {
 	private String license_plate;
 	private String name;
 	private int number_seats;
 	private double cost;
-	public CarModel(String license_plate, String name, int number_seats, double cost) {
+	private int state;
+	private Car_status status_id;
+	public Car(String license_plate, String name, int number_seats, double cost, int state, Car_status status_id) {
 		super();
 		this.license_plate = license_plate;
 		this.name = name;
 		this.number_seats = number_seats;
 		this.cost = cost;
+		this.state = state;
+		this.status_id = status_id;
+	}
+	public Car() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public String getLicense_plate() {
 		return license_plate;
@@ -35,6 +43,18 @@ public class CarModel {
 	}
 	public void setCost(double cost) {
 		this.cost = cost;
+	}
+	public int getState() {
+		return state;
+	}
+	public void setState(int state) {
+		this.state = state;
+	}
+	public Car_status getStatus_id() {
+		return status_id;
+	}
+	public void setStatus_id(Car_status status_id) {
+		this.status_id = status_id;
 	}
 	
 }

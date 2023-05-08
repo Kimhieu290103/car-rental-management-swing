@@ -1,13 +1,13 @@
 package models.model;
 
-public class CustomerModel {
+public class Customer {
 	private String car_id;
 	private String name;
 	private String phone;
-	public CustomerModel() {
+	public Customer() {
 		super();
 	}
-	public CustomerModel(String car_id, String name, String phone) {
+	public Customer(String car_id, String name, String phone) {
 		super();
 		this.car_id = car_id;
 		this.name = name;
