@@ -1,70 +1,136 @@
 package dao;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class CustomerDAO implements DAOInterface<Car> {
+import db.JDBCUtil;
+import models.model.Car_status;
+import models.model.Customer;
+
+public class CustomerDAO implements DAOInterface<Customer> {
 
 	@Override
-	public int insert(Car t) {
-		int ketQua = 0;
+	public int insert(Customer t) {
+		int rs = 0;
 		try {
 			Connection con = JDBCUtil.getConnection();
 			
-			String sql = "INSERT INTO user(license_plate, name, number_seats, cost, state, status_id)"
-					+ " VALUES (?,?,?,?,?,?);";
+			String sql = "INSERT INTO customer(cardId, name, phone)"
+					+ " VALUES (?,?,?);";
 			
 			PreparedStatement pst = con.prepareStatement(sql);
-			pst.setString(1,t.getUsername());
-			pst.setString(2,t.getPassword());
-			pst.setString(3,t.getHoVaTen());
+			pst.setString(1,t.getCar_id());
+			pst.setString(2,t.getName());
+			pst.setString(3,t.getPhone());
 			
-			//bước 3: thực thi câu lệnh sql
-			
-			
-			ketQua = pst.executeUpdate();
-			
-			//bước 4: xử lí kết quả
-			System.out.println("Bạn đã thực thi: " + sql);
-			System.out.println("Có " + ketQua + " dòng bị thay đổi!");
-			
-			// bước 5: 
+			rs = pst.executeUpdate();
 			JDBCUtil.closeConnection(con);
 			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return ketQua;
+		return rs;
 	}
 
 	@Override
-	public int update(Car t) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int update(Customer t) {
+		int result = 0;
+		try {
+			Connection con = JDBCUtil.getConnection();
+			
+			String sql = "UPDATE customer "+ " SET name=?"+ ", phone=?"+ " WHERE cardId=?";
+			
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, t.getName());
+			st.setString(2, t.getPhone());
+			st.setString(3, t.getCar_id());
+			
+			Customer c = new Customer();
+			c.setCar_id(t.getCar_id());	
+			Customer customer = (new CustomerDAO().seclectById(c));
+			
+			result = st.executeUpdate();
+			
+			JDBCUtil.closeConnection(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 
 	@Override
-	public int delete(Car t) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int delete(Customer t) {
+		int result = 0;
+		try {
+			Connection con = JDBCUtil.getConnection();
+			
+			String sql = "DELETE from customer " + " WHERE cardId =?";
+			
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, t.getCar_id());
+			result = st.executeUpdate();
+			
+			JDBCUtil.closeConnection(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 
 	@Override
-	public ArrayList<Car> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Customer> selectAll() {
+		ArrayList<Customer> result = new ArrayList<Customer>();
+		try {
+			Connection con = JDBCUtil.getConnection();
+			String sql = "SELECT * FROM customer";
+			PreparedStatement st = con.prepareStatement(sql);
+			
+			ResultSet rs = st.executeQuery();
+ 
+			while(rs.next()) {
+				String cardId = rs.getString("cardId");
+				String name = rs.getString("name");
+				String phone = rs.getString("phone");
+				
+				Customer customer = new Customer(cardId, name, phone);
+				result.add(customer);
+			}
+			JDBCUtil.closeConnection(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
 
 	@Override
-	public Car seclectById(Car t) {
-		// TODO Auto-generated method stub
-		return null;
+	public Customer seclectById(Customer t) {
+		Customer result = null;
+		try {
+			Connection con = JDBCUtil.getConnection();
+			
+			String sql = "SELECT * FROM customer WHERE cardId=?";
+			PreparedStatement st = con.prepareStatement(sql);
+			st.setString(1, t.getCar_id());
+			
+			ResultSet rs = st.executeQuery();
+			 
+			while(rs.next()) {
+				String cardId = rs.getString("cardId");
+				String name = rs.getString("name");
+				String phone = rs.getString("phone");
+				
+				result = new Customer(cardId, name, phone);
+				break;
+			}
+			JDBCUtil.closeConnection(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return result;
 	}
-
-	@Override
-	public ArrayList<Car> selectByCondition(String condition) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
 }

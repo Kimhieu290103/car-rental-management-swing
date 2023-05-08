@@ -6,8 +6,8 @@ public class Car {
 	private int number_seats;
 	private double cost;
 	private int state;
-	private Car_status status_id;
-	public Car(String license_plate, String name, int number_seats, double cost, int state, Car_status status_id) {
+	private String status_id;
+	public Car(String license_plate, String name, int number_seats, double cost, int state, String status_id) {
 		super();
 		this.license_plate = license_plate;
 		this.name = name;
@@ -50,10 +50,10 @@ public class Car {
 	public void setState(int state) {
 		this.state = state;
 	}
-	public Car_status getStatus_id() {
+	public String getStatus_id() {
 		return status_id;
 	}
-	public void setStatus_id(Car_status status_id) {
+	public void setStatus_id(String status_id) {
 		this.status_id = status_id;
 	}
 	

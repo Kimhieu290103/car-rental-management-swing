@@ -3,12 +3,12 @@ package models.model;
 public class Car_status {
 	private String id;
 	private double cost;
-	private int description;
+	private String description;
 	public Car_status() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Car_status(String id, double cost, int description) {
+	public Car_status(String id, double cost, String description) {
 		super();
 		this.id = id;
 		this.cost = cost;
@@ -26,10 +26,10 @@ public class Car_status {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-	public int getDescription() {
+	public String getDescription() {
 		return description;
 	}
-	public void setDescription(int description) {
+	public void setDescription(String description) {
 		this.description = description;
 	}
 	
