@@ -8,10 +8,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import db.JDBCUtil;
-import models.model.Car;
 import models.model.Order;
 
-public class OrderDAO implements DAOInterface<Order> {
+public class OrderRepository implements RepositoryInterface<Order> {
 
 	@Override
 	public int insert(Order t) {
@@ -61,7 +60,7 @@ public class OrderDAO implements DAOInterface<Order> {
 			
 			Order o = new Order();
 			o.setOrder_id(t.getOrder_id());
-			Order order = (new OrderDAO().seclectById(o));
+			Order order = (new OrderRepository().seclectById(o));
 			
 			result = st.executeUpdate();
 			

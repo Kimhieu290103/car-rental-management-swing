@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import db.JDBCUtil;
 import models.model.Car;
 
-public class CarDAO implements DAOInterface<Car> {
+public class CarRepository implements RepositoryInterface<Car> {
 
 	@Override
 	public int insert(Car t) {
@@ -53,7 +53,7 @@ public class CarDAO implements DAOInterface<Car> {
 			
 			Car c = new Car();
 			c.setLicense_plate(t.getLicense_plate());
-			Car car = (new CarDAO().seclectById(c));
+			Car car = (new CarRepository().seclectById(c));
 			
 			result = st.executeUpdate();
 			

@@ -7,10 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import db.JDBCUtil;
-import models.model.Car_status;
 import models.model.Customer;
 
-public class CustomerDAO implements DAOInterface<Customer> {
+public class CustomerRepository implements RepositoryInterface<Customer> {
 
 	@Override
 	public int insert(Customer t) {
@@ -50,7 +49,7 @@ public class CustomerDAO implements DAOInterface<Customer> {
 			
 			Customer c = new Customer();
 			c.setCar_id(t.getCar_id());	
-			Customer customer = (new CustomerDAO().seclectById(c));
+			Customer customer = (new CustomerRepository().seclectById(c));
 			
 			result = st.executeUpdate();
 			

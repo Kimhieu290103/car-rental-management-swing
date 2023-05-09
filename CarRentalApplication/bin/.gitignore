@@ -1,2 +1,5 @@
-/db/
 /views/
+/controllers/
+/app/
+/db/
+/dao/

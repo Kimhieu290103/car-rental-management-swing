@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import db.JDBCUtil;
 import models.model.Car_status;
 
-public class CarStatusDAO implements DAOInterface<Car_status> {
+public class CarStatusRepository implements RepositoryInterface<Car_status> {
 
 	@Override
 	public int insert(Car_status t) {
