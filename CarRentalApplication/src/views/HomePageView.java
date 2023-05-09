@@ -60,7 +60,7 @@ public class HomePageView extends JFrame {
 		bodyPanel.setBackground(new Color(86, 157, 170));
 		
 		lb1 = new JLabel("VTH");
-		lb1.setIcon(new ImageIcon("E:\\StudyDocuments\\ExerciseCode\\DUT_Semesters\\Semseter4\\Java\\BaiTapLon\\car-rental-management-swing\\CarRentalApplication\\image\\car.png"));
+		lb1.setIcon(new ImageIcon("image/car.png"));
 		lb1.setFont(new Font("Verdana", Font.BOLD, 22));
 		lb1.setHorizontalAlignment(SwingConstants.CENTER);
 		lb1.setBounds(26, 10, 127, 70);
