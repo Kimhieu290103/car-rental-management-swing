@@ -49,7 +49,7 @@ public class CustomerRepository implements RepositoryInterface<Customer> {
 
 			Customer c = new Customer();
 			c.setCar_id(t.getCar_id());
-			Customer customer = (new CustomerRepository().seclectById(c));
+			// Customer customer = (new CustomerRepository().seclectById(c));
 
 			result = st.executeUpdate();
 

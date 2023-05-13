@@ -61,7 +61,7 @@ public class OrderRepository implements RepositoryInterface<Order> {
 
 			Order o = new Order();
 			o.setOrder_id(t.getOrder_id());
-			Order order = (new OrderRepository().seclectById(o));
+			// Order order = (new OrderRepository().seclectById(o));
 
 			result = st.executeUpdate();
 

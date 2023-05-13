@@ -54,7 +54,7 @@ public class CarRepository implements RepositoryInterface<Car> {
 
 			Car c = new Car();
 			c.setLicense_plate(t.getLicense_plate());
-			Car car = (new CarRepository().seclectById(c));
+			// Car car = (new CarRepository().seclectById(c));
 
 			result = st.executeUpdate();
 

@@ -131,7 +131,7 @@ public class EditCarView extends JFrame {
 		init();
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 517, 364);
-		setTitle("Thông tin chi tiết");
+		setTitle("Chỉnh sửa thông tin");
 		setLocationRelativeTo(null);
 		setContentPane(contentPane);
 	}

@@ -27,7 +27,7 @@ public class RentCarView extends JFrame {
 	private JTextField txtL_2;
 	private JTextField txtL_3;
 	private JTextField txtL_4;
-	
+
 	public JButton btnAddNewCustomer, btnOK, btnReset, btnBack, btnCheck;
 	public JTextField txtDateStart;
 	public JTextField txtDateEnd;
@@ -36,12 +36,11 @@ public class RentCarView extends JFrame {
 	public JTextField txtCustomerPhone;
 	public JButton btnRegister;
 
-
 	private void init() {
 		contentPane = new JPanel();
 		contentPane.setBorder(new LineBorder(Color.BLACK, 1));
 		contentPane.setLayout(null);
-		
+
 		JPanel headerPanel = new JPanel();
 		headerPanel.setBounds(0, 0, 895, 71);
 		headerPanel.setLayout(null);
@@ -55,15 +54,13 @@ public class RentCarView extends JFrame {
 		leftPanel.setLayout(null);
 		leftPanel.setBorder(new LineBorder(Color.BLACK, 1));
 		leftPanel.setBounds(0, 70, 430, 241);
-		
-		
+
 		JLabel lbTitle = new JLabel("ĐĂNG KÝ THUÊ XE");
 		lbTitle.setHorizontalAlignment(SwingConstants.CENTER);
 		lbTitle.setFont(new Font("Verdana", Font.BOLD, 22));
 		lbTitle.setBounds(0, 10, 895, 51);
 		headerPanel.add(lbTitle);
-		
-		
+
 		JLabel lbR_1 = new JLabel("Thông tin khách hàng");
 		lbR_1.setHorizontalAlignment(SwingConstants.CENTER);
 		lbR_1.setBounds(10, 10, 447, 26);
@@ -77,51 +74,50 @@ public class RentCarView extends JFrame {
 		JLabel lbR_4 = new JLabel("Số điện thoại");
 		lbR_4.setBounds(10, 118, 102, 26);
 		lbR_4.setFont(new Font("Verdana", Font.BOLD, 11));
-		
+
 		btnAddNewCustomer = new JButton("Thêm khách hàng mới");
 		btnAddNewCustomer.setFont(new Font("Verdana", Font.BOLD, 11));
 		btnAddNewCustomer.setBounds(10, 154, 223, 26);
-		
+
 		txtCCCD = new JTextField();
 		txtCCCD.setColumns(10);
 		txtCCCD.setBounds(146, 48, 311, 26);
 		txtCCCD.setFont(new Font("Verdana", Font.BOLD, 11));
-		
-		
+
 		txtCustomerName = new JTextField();
 		txtCustomerName.setBackground(Color.WHITE);
 		txtCustomerName.setEditable(false);
 		txtCustomerName.setColumns(10);
 		txtCustomerName.setBounds(146, 82, 311, 26);
 		txtCustomerName.setFont(new Font("Verdana", Font.BOLD, 11));
-		
+
 		txtCustomerPhone = new JTextField();
 		txtCustomerPhone.setBackground(Color.WHITE);
 		txtCustomerPhone.setEditable(false);
 		txtCustomerPhone.setColumns(10);
 		txtCustomerPhone.setBounds(146, 118, 311, 26);
 		txtCustomerPhone.setFont(new Font("Verdana", Font.BOLD, 11));
-		
+
 		btnOK = new JButton("XÁC NHẬN");
 		btnOK.setFont(new Font("Verdana", Font.BOLD, 11));
 		btnOK.setBounds(10, 190, 146, 26);
 		btnOK.setVisible(false);
 		btnOK.setFont(new Font("Verdana", Font.BOLD, 11));
-		
+
 		btnReset = new JButton("Đặt lại");
 		btnReset.setBounds(166, 191, 146, 26);
 		btnReset.setFont(new Font("Verdana", Font.BOLD, 11));
 		btnReset.setVisible(false);
-		
+
 		btnBack = new JButton("Trở lại");
 		btnBack.setBounds(322, 191, 135, 26);
 		btnBack.setFont(new Font("Verdana", Font.BOLD, 11));
 		btnBack.setVisible(false);
-		
+
 		btnCheck = new JButton("Kiểm tra");
 		btnCheck.setFont(new Font("Verdana", Font.BOLD, 11));
 		btnCheck.setBounds(234, 154, 223, 26);
-		
+
 		rightPanel.add(btnCheck);
 		rightPanel.add(btnReset);
 		rightPanel.add(btnBack);
@@ -134,8 +130,7 @@ public class RentCarView extends JFrame {
 		rightPanel.add(lbR_2);
 		rightPanel.add(lbR_3);
 		rightPanel.add(lbR_4);
-		
-		
+
 		JLabel lbL_1 = new JLabel("Mã đăng ký thuê xe");
 		lbL_1.setBounds(10, 10, 197, 26);
 		lbL_1.setFont(new Font("Verdana", Font.BOLD, 11));
@@ -160,8 +155,7 @@ public class RentCarView extends JFrame {
 		leftPanel.add(lbL_4);
 		leftPanel.add(lbL_5);
 		leftPanel.add(lbL_6);
-		
-		
+
 		txtL_1 = new JTextField();
 		txtL_1.setBackground(Color.WHITE);
 		txtL_1.setEditable(false);
@@ -169,7 +163,7 @@ public class RentCarView extends JFrame {
 		txtL_1.setColumns(10);
 		txtL_1.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtL_1);
-		
+
 		txtL_2 = new JTextField();
 		txtL_2.setEditable(false);
 		txtL_2.setBackground(Color.WHITE);
@@ -177,7 +171,7 @@ public class RentCarView extends JFrame {
 		txtL_2.setBounds(202, 46, 218, 26);
 		txtL_2.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtL_2);
-		
+
 		txtL_3 = new JTextField();
 		txtL_3.setEditable(false);
 		txtL_3.setBackground(Color.WHITE);
@@ -185,7 +179,7 @@ public class RentCarView extends JFrame {
 		txtL_3.setBounds(202, 82, 218, 26);
 		txtL_3.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtL_3);
-		
+
 		txtL_4 = new JTextField();
 		txtL_4.setEditable(false);
 		txtL_4.setBackground(Color.WHITE);
@@ -193,38 +187,40 @@ public class RentCarView extends JFrame {
 		txtL_4.setBounds(202, 118, 218, 26);
 		txtL_4.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtL_4);
-		
+
 		txtDateStart = new JTextField();
 		txtDateStart.setColumns(10);
 		txtDateStart.setBounds(202, 154, 218, 26);
 		txtDateStart.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtDateStart);
-		
+
 		txtDateEnd = new JTextField();
 		txtDateEnd.setColumns(10);
 		txtDateEnd.setBounds(202, 190, 218, 26);
 		txtDateEnd.setFont(new Font("Verdana", Font.BOLD, 11));
 		leftPanel.add(txtDateEnd);
-		
+
 		btnRegister = new JButton("ĐĂNG KÝ");
 		btnRegister.setBounds(10, 324, 875, 26);
 		btnRegister.setFont(new Font("Verdana", Font.BOLD, 15));
 		btnRegister.setBorder(new LineBorder(Color.BLACK, 2));
 		btnRegister.setBackground(new Color(87, 125, 134));
 		contentPane.add(btnRegister);
-		
+
 		contentPane.add(rightPanel);
 		contentPane.add(headerPanel);
 		contentPane.add(leftPanel);
-	}																																
+	}
+
 	private RentCarView() {
 		init();
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 909, 397);
 		setTitle("Thuê xe");
 		setLocationRelativeTo(null);
-		setContentPane(contentPane);	
+		setContentPane(contentPane);
 	}
+
 	public void clearAll() {
 		txtL_1.setText("");
 		txtL_2.setText("");
@@ -236,12 +232,13 @@ public class RentCarView extends JFrame {
 		txtCustomerName.setText("");
 		txtCustomerPhone.setText("");
 	}
+
 	public void clearCutomerInformation() {
 		txtCCCD.setText("");
 		txtCustomerName.setText("");
 		txtCustomerPhone.setText("");
 	}
-	
+
 	public void addActionListener(ActionListener actionListener) {
 		btnAddNewCustomer.addActionListener(actionListener);
 		btnOK.addActionListener(actionListener);
@@ -250,9 +247,11 @@ public class RentCarView extends JFrame {
 		btnCheck.addActionListener(actionListener);
 		btnRegister.addActionListener(actionListener);
 	}
+
 	public void setEnableBtnOK() {
 		btnOK.setVisible(true);
 	}
+
 	public void setDefaultInformation(Car car) {
 		clearAll();
 		StringBuffer order_id = new StringBuffer(LocalDateTime.now().toString());
@@ -260,20 +259,22 @@ public class RentCarView extends JFrame {
 		while (i < order_id.length()) {
 			if (order_id.charAt(i) < 48 || order_id.charAt(i) > 57) {
 				order_id.deleteCharAt(i);
-			}
-			else i++;
+			} else
+				i++;
 		}
-		
+
 		txtL_1.setText(order_id.toString());
 		txtL_2.setText(car.getName());
 		txtL_3.setText(car.getLicense_plate());
 		txtL_4.setText(car.getStatus_id());
 	}
+
 	public void setCustomerInformation(Customer customer) {
 		txtCCCD.setText(customer.getCar_id());
 		txtCustomerName.setText(customer.getName());
 		txtCustomerPhone.setText(customer.getPhone());
 	}
+
 	public void addNewCustomerMode() {
 		txtCustomerName.setEditable(true);
 		txtCustomerPhone.setEditable(true);
@@ -281,6 +282,7 @@ public class RentCarView extends JFrame {
 		btnReset.setVisible(true);
 		btnBack.setVisible(true);
 	}
+
 	public void existCustomerMode() {
 		txtCustomerName.setEditable(false);
 		txtCustomerPhone.setEditable(false);
@@ -288,20 +290,26 @@ public class RentCarView extends JFrame {
 		btnReset.setVisible(false);
 		btnBack.setVisible(false);
 	}
-	public Order getOrder() {
+
+	public Order getOrder() throws Exception {
 		Order order = new Order();
 		order.setOrder_id(txtL_1.getText());
 		order.setCar_id(txtL_3.getText());
-		order.setBegin_date(Date.valueOf(txtDateStart.getText()));
-		order.setEnd_date(Date.valueOf(txtDateEnd.getText()));
+
+		try {
+			order.setBegin_date(Date.valueOf(txtDateStart.getText()));
+			order.setEnd_date(Date.valueOf(txtDateEnd.getText()));
+		} catch (Exception e) {
+			throw new Exception("Bạn phải nhập đúng định dạng ngày: 'yyyy-MM-dd'");
+		}
+
 		order.setCar_status_before_rent(txtL_4.getText());
 		order.setCustomer_id(txtCCCD.getText());
 		return order;
 	}
-	
+
 	public static RentCarView getInstance() {
 		return new RentCarView();
 	}
 
 }
-
